@@ -15,15 +15,13 @@
         </div>
         <input class="btn-primary" type="submit" value="Login">
         <input class="btn-primary" ng-click="vm.logOut()" ng-show="vm.isLoggedIn()" value="LogOut">
-        <input class="btn-primary" ng-click="vm.logOut()"  value="LogOut">
-
         <h2 ng-show="vm.error">{{vm.error}}</h2>
         <div class="container">
           User: {{vm.currentUser.password.email}}
 
         </div>
     </form>
-    
+
     </div>
 
 

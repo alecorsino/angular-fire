@@ -4,10 +4,10 @@
   angular.module('App')
     .controller('NavCtrl', NavCtrl);
 
-    NavCtrl.$inject = ['Util','$location'];
+    NavCtrl.$inject = ['Util'];
 
 
-    function NavCtrl(Util,$location) {
+    function NavCtrl(Util) {
       var vm = this;
       vm.isActiveClass =  Util.isActiveClass;
 

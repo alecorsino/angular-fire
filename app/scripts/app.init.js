@@ -1,15 +1,15 @@
-// (function(){
-// 'use strict';
-//
-//   angular
-//       .module('App')
-//       .run(runBlock);
-//
-//   runBlock.$inject = ['$rootScope', 'Util'];
-//
-//   function runBlock($rootScope, Util) {
-//
-//   }
-//
-//
-// })();
+(function(){
+'use strict';
+
+  angular
+      .module('App')
+      .run(runBlock);
+
+  runBlock.$inject = ['AuthService'];
+
+  function runBlock(AuthService) {
+     AuthService.$unauth();
+  }
+
+
+})();

@@ -7,7 +7,7 @@ angular.module('App')
   LoginCtrl.$inject = ['AuthService'];
 
 
-  function LoginCtrl(AuthService, $rootScope) {
+  function LoginCtrl(AuthService) {
         var vm = this;
         vm.currentUser = null;
         vm.user = newUser();
@@ -22,7 +22,7 @@ angular.module('App')
           // console.log(vm.user);
           AuthService.$authWithPassword(vm.user)
               .then(function(authData) {
-                    console.log("Loggin in:",  authData);
+                    console.log("User logged in: " + authData.uid);
               }).catch(function(error) {
                     console.error("Authentication failed:", error);
                     vm.error = error.message;
@@ -34,9 +34,11 @@ angular.module('App')
           AuthService.$unauth();
         }
 
-        AuthService.$onAuth(function(auth) {
-            console.log("Logged in as:",  auth);
-            vm.currentUser = auth;
+        AuthService.$onAuth(function(authData) {
+          if (authData){
+             console.log("User " + authData.uid + " is logged in with " + authData.provider);
+            vm.currentUser = authData;
+          }
         });
 
         function isLoggedIn(){

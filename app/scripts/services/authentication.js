@@ -1,13 +1,6 @@
 (function(){
 'use strict';
 
-/**
- * @ngdoc service
- * @name angularFireApp.authentication
- * @description
- * # authentication
- * Factory in the angularFireApp.
- */
 angular.module('App')
     .factory('AuthService', FirebaseAuth);
 

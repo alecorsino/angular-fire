@@ -15,7 +15,7 @@ angular.module('App')
         vm.logIn = logIn;
         vm.logOut = logOut;
         vm.error = null;
-        
+
 
         // Handle Email/Password login
         function logIn() {

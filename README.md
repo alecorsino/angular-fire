@@ -5,6 +5,8 @@ It has preconfigured common functionality like Authentication, Authorization, et
 In the future I might turn it into a Yo Generator.
 
 ## Build & development
+you need to install Node.JS
+Clone the repo and run `npm install` and `bower install`
 
 Run `grunt` for building and `grunt serve` for preview.
 

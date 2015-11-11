@@ -5,7 +5,6 @@ angular.module('app.routes',['ngRoute'])
   .config(function ($routeProvider) {
 
     $routeProvider
-
       .when('/', {
         redirectTo:'/home'
       })
